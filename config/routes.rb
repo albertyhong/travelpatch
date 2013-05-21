@@ -13,13 +13,15 @@ Travelpatch::Application.routes.draw do
 
   get "sessions/destroy"
 
+  get "trips/index"
+
   get "destinations/index"
 
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
   get "log_out" => "sessions#destroy", :as => "log_out"
 
-
+  get "trip_list" => "trips#index", :as => "trip_list"
 
   get "select_destinations" => "destinations#index", :as => "select_destinations"
 
